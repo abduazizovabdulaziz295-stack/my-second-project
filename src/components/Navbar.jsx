@@ -12,7 +12,7 @@ const Navbar = ({ search, setSearch, cartItems = [], setCartOpen }) => {
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black/30 backdrop-blur-md border-b border-white/10 shadow-lg p-4 flex justify-between items-center">
       
-      {/* LINKS */}
+   
       <div className="flex gap-6">
         <Link to="/" className="text-white font-semibold hover:text-gray-300">
           🏠 {t("home")}

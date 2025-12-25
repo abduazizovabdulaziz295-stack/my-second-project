@@ -1,13 +1,14 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 
+
 const forSaleProducts = [
   {
     id: 1,
     name: "Nike Air Max 270",
     description: "Comfortable lifestyle sneakers with a bold Air unit design.",
-    price: 18,
-    image: "https://static.nike.com/a/images/q_auto:eco/t_product_v1/f_auto/dpr_1.5/h_1027,c_limit/3d52acef-6743-4ccd-8045-6d7af1b7452c/air-superfly-womens-shoes-QN4BTbYU.png",
+    price: 180,
+    image: "",
     colors: ["#000000", "#ffffff", "#ff0000"],
   },
   {
@@ -15,7 +16,7 @@ const forSaleProducts = [
     name: "Nike LeBron James XXIII",
     description: "Sport streetwear sneakers with iconic style and comfort.",
     price: 160,
-    image: "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/aea0072d-5f4e-4aa8-b686-cd1a64d3d92f/LEBRON+XXIII+LUX.png",
+    image: "",
     colors: ["#1e40af", "#000000", "#facc15"],
   },
   {
@@ -23,10 +24,267 @@ const forSaleProducts = [
     name: "Nike Air Force 1 '07",
     description: "Timeless basketball-inspired sneakers.",
     price: 80,
-    image: "https://static.nike.com/a/images/t_web_pdp_535_v2/f_auto/f7f531a6-148e-4ed6-b373-42d02843523a/M+COURT+LITE+4+HC+PRM.png",
+    image: "",
     colors: ["#ffffff", "#e5e7eb", "#000000"],
   },
+  {
+    id: 4,
+    name: "Nike Dunk Low",
+    description: "Classic low-top sneakers for everyday wear.",
+    price: 110,
+    image: "",
+    colors: ["#000000", "#ffffff", "#22c55e"],
+  },
+  {
+    id: 5,
+    name: "Nike Air Jordan 1 Mid",
+    description: "Iconic Jordan style with modern comfort.",
+    price: 140,
+    image: "",
+    colors: ["#dc2626", "#000000", "#ffffff"],
+  },
+  {
+    id: 6,
+    name: "Nike Air Max 90",
+    description: "Retro running style with visible Air cushioning.",
+    price: 130,
+    image: "",
+    colors: ["#6b7280", "#ffffff", "#000000"],
+  },
+  {
+    id: 7,
+    name: "Nike React Infinity Run",
+    description: "Designed for comfort and injury prevention.",
+    price: 160,
+    image: "",
+    colors: ["#2563eb", "#000000", "#ffffff"],
+  },
+  {
+    id: 8,
+    name: "Nike ZoomX Vaporfly",
+    description: "Elite racing shoes for maximum speed.",
+    price: 250,
+    image: "",
+    colors: ["#f97316", "#000000", "#ffffff"],
+  },
+  {
+    id: 9,
+    name: "Nike Pegasus 40",
+    description: "Daily running shoes with responsive cushioning.",
+    price: 130,
+    image: "",
+    colors: ["#0ea5e9", "#ffffff", "#000000"],
+  },
+  {
+    id: 10,
+    name: "Nike Blazer Mid '77",
+    description: "Vintage basketball style reimagined.",
+    price: 100,
+    image: "",
+    colors: ["#ffffff", "#000000", "#ef4444"],
+  },
+  {
+    id: 11,
+    name: "Nike Air Max Plus",
+    description: "Aggressive design with Tuned Air technology.",
+    price: 170,
+    image: "",
+    colors: ["#7c3aed", "#000000", "#ffffff"],
+  },
+  {
+    id: 12,
+    name: "Nike Free Run 5.0",
+    description: "Natural feel for flexible movement.",
+    price: 100,
+    image: "",
+    colors: ["#22c55e", "#000000", "#ffffff"],
+  },
+  {
+    id: 13,
+    name: "Nike Air Zoom Structure",
+    description: "Stability running shoes with responsive Zoom Air.",
+    price: 140,
+    image: "",
+    colors: ["#2563eb", "#ffffff", "#000000"],
+  },
+  {
+    id: 14,
+    name: "Nike Metcon 9",
+    description: "High-performance training shoes.",
+    price: 150,
+    image: "",
+    colors: ["#000000", "#f97316", "#ffffff"],
+  },
+  {
+    id: 15,
+    name: "Nike Air Huarache",
+    description: "Street-ready comfort with snug fit.",
+    price: 120,
+    image: "",
+    colors: ["#000000", "#ffffff", "#3b82f6"],
+  },
+  {
+    id: 16,
+    name: "Nike Cortez",
+    description: "Classic running silhouette turned lifestyle icon.",
+    price: 90,
+    image: "",
+    colors: ["#ffffff", "#dc2626", "#000000"],
+  },
+  {
+    id: 17,
+    name: "Nike Air Max SC",
+    description: "Simple, comfortable and versatile design.",
+    price: 85,
+    image: "",
+    colors: ["#9ca3af", "#000000", "#ffffff"],
+  },
+  {
+    id: 18,
+    name: "Nike Revolution 6",
+    description: "Affordable everyday running shoes.",
+    price: 70,
+    image: "",
+    colors: ["#000000", "#2563eb", "#ffffff"],
+  },
+  {
+    id: 19,
+    name: "Nike Zoom Fly 5",
+    description: "Fast feel with responsive foam.",
+    price: 170,
+    image: "",
+    colors: ["#facc15", "#000000", "#ffffff"],
+  },
+  {
+    id: 20,
+    name: "Nike Air Max Excee",
+    description: "Modern take on a classic Air Max look.",
+    price: 95,
+    image: "",
+    colors: ["#ffffff", "#000000", "#ef4444"],
+  },
+  {
+    id: 21,
+    name: "Nike Downshifter 12",
+    description: "Lightweight running shoes for daily use.",
+    price: 65,
+    image: "",
+    colors: ["#22c55e", "#000000", "#ffffff"],
+  },
+  {
+    id: 22,
+    name: "Nike Air Zoom Pegasus Trail",
+    description: "Trail-ready running shoes.",
+    price: 145,
+    image: "",
+    colors: ["#92400e", "#000000", "#ffffff"],
+  },
+  {
+    id: 23,
+    name: "Nike Air Max Alpha Trainer",
+    description: "Stability and support for gym workouts.",
+    price: 110,
+    image: "",
+    colors: ["#000000", "#3b82f6", "#ffffff"],
+  },
+  {
+    id: 24,
+    name: "Nike SB Dunk Low",
+    description: "Skate-inspired sneakers with premium feel.",
+    price: 120,
+    image: "",
+    colors: ["#16a34a", "#000000", "#ffffff"],
+  },
+  {
+    id: 25,
+    name: "Nike Air Jordan 1 Low",
+    description: "Low-cut version of the iconic Jordan 1.",
+    price: 130,
+    image: "",
+    colors: ["#dc2626", "#ffffff", "#000000"],
+  },
+  {
+    id: 26,
+    name: "Nike Air Zoom GT Cut",
+    description: "Basketball shoes built for quick cuts.",
+    price: 170,
+    image: "",
+    colors: ["#7c3aed", "#000000", "#ffffff"],
+  },
+  {
+    id: 27,
+    name: "Nike Air Presto",
+    description: "Sock-like fit with lightweight comfort.",
+    price: 120,
+    image: "",
+    colors: ["#000000", "#ffffff", "#22c55e"],
+  },
+  {
+    id: 28,
+    name: "Nike Zoom Freak",
+    description: "Giannis-inspired basketball shoes.",
+    price: 135,
+    image: "",
+    colors: ["#1e40af", "#000000", "#ffffff"],
+  },
+  {
+    id: 29,
+    name: "Nike Air Max Flyknit",
+    description: "Breathable Flyknit upper with Air cushioning.",
+    price: 160,
+    image: "",
+    colors: ["#0ea5e9", "#000000", "#ffffff"],
+  },
+  {
+    id: 30,
+    name: "Nike Lunar Roam",
+    description: "Soft Lunar foam for all-day comfort.",
+    price: 125,
+    image: "",
+    colors: ["#9ca3af", "#000000", "#ffffff"],
+  },
+  {
+    id: 31,
+    name: "Nike Air Max Pulse",
+    description: "Street-inspired design with soft cushioning.",
+    price: 150,
+    image: "",
+    colors: ["#000000", "#ef4444", "#ffffff"],
+  },
+  {
+    id: 32,
+    name: "Nike Flex Experience",
+    description: "Minimalist running shoes for flexibility.",
+    price: 75,
+    image: "",
+    colors: ["#22c55e", "#ffffff", "#000000"],
+  },
+  {
+    id: 33,
+    name: "Nike Court Vision Low",
+    description: "Basketball-inspired casual sneakers.",
+    price: 85,
+    image: "",
+    colors: ["#ffffff", "#000000", "#2563eb"],
+  },
+  {
+    id: 34,
+    name: "Nike Air Max SYSTM",
+    description: "Modern Air Max look with lightweight feel.",
+    price: 110,
+    image: "",
+    colors: ["#000000", "#6b7280", "#ffffff"],
+  },
+  {
+    id: 35,
+    name: "Nike Air Max Terrascape",
+    description: "Sustainable materials with Air Max comfort.",
+    price: 180,
+    image: "",
+    colors: ["#14532d", "#000000", "#ffffff"],
+  },
 ];
+
 
 const ForSale = () => {
   const { addToCart } = useCart();
@@ -38,7 +296,7 @@ const ForSale = () => {
     if (!selectedProduct) return;
     addToCart({ ...selectedProduct, color: selectedColor });
     setSelectedProduct(null);
-    setShowRegister(true); // ochilsin registratsiya modal
+    setShowRegister(true); 
   };
 
   return (
@@ -86,7 +344,6 @@ const ForSale = () => {
         </div>
       </div>
 
-      {/* Product Modal */}
       {selectedProduct && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
           <div className="bg-[#111] w-[90%] sm:w-[420px] rounded-2xl p-6 relative
@@ -136,7 +393,6 @@ const ForSale = () => {
         </div>
       )}
 
-      {/* Registration Modal */}
       {showRegister && (
         <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
           <div className="bg-[#111] w-[90%] sm:w-[400px] rounded-2xl p-6 relative">
