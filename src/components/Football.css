@@ -1,0 +1,89 @@
+
+
+.intro-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 250px; 
+  background: radial-gradient(circle at center, #000 40%, #111 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; 
+  padding-top: 40px; 
+  animation: introFade 1s ease 2.5s forwards;
+  z-index: 50;
+}
+
+.ball {
+  width: 90px;
+  height: 90px;
+  background: radial-gradient(circle at 30% 30%, #fff 40%, #aaa 100%);
+  border-radius: 50%;
+  box-shadow: 0 0 30px rgba(255, 0, 0, 0.4);
+  position: relative;
+  animation: spinBall 1.5s ease-in-out infinite;
+}
+
+.ball::before {
+  content: "";
+  position: absolute;
+  inset: 10%;
+  border: 3px solid rgba(255, 0, 0, 0.7);
+  border-radius: 50%;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+.intro-text {
+  color: #fff;
+  font-size: 2rem;
+  letter-spacing: 4px;
+  font-weight: 800;
+  margin-top: 0.8rem;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  opacity: 0;
+  transform: scale(0.9);
+  animation: textAppear 1s ease 0.6s forwards;
+}
+
+
+@keyframes spinBall {
+  0% { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.1); }
+  100% { transform: rotate(360deg) scale(1); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes textAppear {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes introFade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
