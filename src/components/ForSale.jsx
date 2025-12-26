@@ -8,7 +8,7 @@ const forSaleProducts = [
     name: "Nike Air Max 270",
     description: "Comfortable lifestyle sneakers with a bold Air unit design.",
     price: 180,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1a6c00e4-30fa-41ab-85f0-caa39279dcaf/M+NK+DF+SWOOSH+FLEECE+PO+HOOD.png",
     colors: ["#000000", "#ffffff", "#ff0000"],
   },
   {
@@ -16,7 +16,7 @@ const forSaleProducts = [
     name: "Nike LeBron James XXIII",
     description: "Sport streetwear sneakers with iconic style and comfort.",
     price: 160,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bea10067-4c89-4bae-8d75-ac5e0fb583e1/M+NK+DF+RISE+365+SS+C25.png",
     colors: ["#1e40af", "#000000", "#facc15"],
   },
   {
@@ -24,7 +24,7 @@ const forSaleProducts = [
     name: "Nike Air Force 1 '07",
     description: "Timeless basketball-inspired sneakers.",
     price: 80,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/93c96113-e944-404e-ac1a-855091237fc8/W+NSW+PHNX+FLC+HR+PANT+WIDE+2.png",
     colors: ["#ffffff", "#e5e7eb", "#000000"],
   },
   {
@@ -32,7 +32,7 @@ const forSaleProducts = [
     name: "Nike Dunk Low",
     description: "Classic low-top sneakers for everyday wear.",
     price: 110,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/464ab3ac-0dc0-4fd0-84bd-eae123a2db18/NIKE+CORTEZ.png",
     colors: ["#000000", "#ffffff", "#22c55e"],
   },
   {
@@ -40,7 +40,7 @@ const forSaleProducts = [
     name: "Nike Air Jordan 1 Mid",
     description: "Iconic Jordan style with modern comfort.",
     price: 140,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/39e50a5f-9f4c-4bda-961d-66b23c71fefe/KILLSHOT+2.png",
     colors: ["#dc2626", "#000000", "#ffffff"],
   },
   {
@@ -48,7 +48,7 @@ const forSaleProducts = [
     name: "Nike Air Max 90",
     description: "Retro running style with visible Air cushioning.",
     price: 130,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/7a5b9a2b-08b7-48ec-80f6-29d18c07a4bc/NIKE+AIR+MAX+90+PRM.png",
     colors: ["#6b7280", "#ffffff", "#000000"],
   },
   {
@@ -56,7 +56,7 @@ const forSaleProducts = [
     name: "Nike React Infinity Run",
     description: "Designed for comfort and injury prevention.",
     price: 160,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6fcba56f-b8c9-4fd1-83db-e6cded8869e0/AIR+MAX+DN8.png",
     colors: ["#2563eb", "#000000", "#ffffff"],
   },
   {
@@ -64,7 +64,7 @@ const forSaleProducts = [
     name: "Nike ZoomX Vaporfly",
     description: "Elite racing shoes for maximum speed.",
     price: 250,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/249089f5-f40c-4317-9f40-17a8d9148f61/JORDAN+TF+FLY+WARM+HOOD.png",
     colors: ["#f97316", "#000000", "#ffffff"],
   },
   {
@@ -72,7 +72,7 @@ const forSaleProducts = [
     name: "Nike Pegasus 40",
     description: "Daily running shoes with responsive cushioning.",
     price: 130,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/ed5e2c7b-441b-4380-b3c8-39bfee5007e9/W+NSW+CLUB+FLC+MR+OS+PANT.png",
     colors: ["#0ea5e9", "#ffffff", "#000000"],
   },
   {
@@ -80,7 +80,7 @@ const forSaleProducts = [
     name: "Nike Blazer Mid '77",
     description: "Vintage basketball style reimagined.",
     price: 100,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/292469d5-db4f-4c2c-af1a-0e764b02a030/WMNS+NIKE+SHOX+TL.png",
     colors: ["#ffffff", "#000000", "#ef4444"],
   },
   {
@@ -88,7 +88,7 @@ const forSaleProducts = [
     name: "Nike Air Max Plus",
     description: "Aggressive design with Tuned Air technology.",
     price: 170,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/b37cda75-7519-43cf-8143-9c6dae4dc730/M+NK+DF+TEE+RLGD+RESET.png",
     colors: ["#7c3aed", "#000000", "#ffffff"],
   },
   {
@@ -96,7 +96,7 @@ const forSaleProducts = [
     name: "Nike Free Run 5.0",
     description: "Natural feel for flexible movement.",
     price: 100,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/29812ed7-3786-4852-827f-cefa0888d265/COURT+BOROUGH+LOW+RECRAFT+BP.png",
     colors: ["#22c55e", "#000000", "#ffffff"],
   },
   {
@@ -104,7 +104,7 @@ const forSaleProducts = [
     name: "Nike Air Zoom Structure",
     description: "Stability running shoes with responsive Zoom Air.",
     price: 140,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/5ba6bf96-98b2-446d-b57f-c61c2c748974/W+NSW+CLUB+FLC+STD+PO+HDY.png",
     colors: ["#2563eb", "#ffffff", "#000000"],
   },
   {
@@ -112,7 +112,7 @@ const forSaleProducts = [
     name: "Nike Metcon 9",
     description: "High-performance training shoes.",
     price: 150,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/72030817-22d8-4424-8a91-193ba20591ce/W+NSW+CLUB+FLC+MR+PANT+STD.png",
     colors: ["#000000", "#f97316", "#ffffff"],
   },
   {
@@ -120,7 +120,7 @@ const forSaleProducts = [
     name: "Nike Air Huarache",
     description: "Street-ready comfort with snug fit.",
     price: 120,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/6dc95990-7d5e-450a-aa00-fd0ba81c9fc9/Jordan+Varsity+Jacket.png",
     colors: ["#000000", "#ffffff", "#3b82f6"],
   },
   {
@@ -128,7 +128,7 @@ const forSaleProducts = [
     name: "Nike Cortez",
     description: "Classic running silhouette turned lifestyle icon.",
     price: 90,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/66176125-919c-4d1e-98be-f96a2e064d00/NIKE+FIELD+GENERAL.png",
     colors: ["#ffffff", "#dc2626", "#000000"],
   },
   {
@@ -136,7 +136,7 @@ const forSaleProducts = [
     name: "Nike Air Max SC",
     description: "Simple, comfortable and versatile design.",
     price: 85,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/de72c872-3780-4736-8537-ef3940c1663d/W+NK+ONE+TF+PANT+POLAR.png",
     colors: ["#9ca3af", "#000000", "#ffffff"],
   },
   {
@@ -144,7 +144,7 @@ const forSaleProducts = [
     name: "Nike Revolution 6",
     description: "Affordable everyday running shoes.",
     price: 70,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6e9219ac-0986-4f28-a4c9-2ea8f814e94a/W+NSW+TF+SYNFL+NK+CLSC+SHN+PFR.png",
     colors: ["#000000", "#2563eb", "#ffffff"],
   },
   {
@@ -152,7 +152,7 @@ const forSaleProducts = [
     name: "Nike Zoom Fly 5",
     description: "Fast feel with responsive foam.",
     price: 170,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/e4b872ee-53b1-4004-b1ee-98fb12ee7e5d/M+NK+CLUB+BB+JGGR+REISSUE.png",
     colors: ["#facc15", "#000000", "#ffffff"],
   },
   {
@@ -160,7 +160,7 @@ const forSaleProducts = [
     name: "Nike Air Max Excee",
     description: "Modern take on a classic Air Max look.",
     price: 95,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/ec859a60-5fa0-48a2-85bd-475b9fbe74d4/M+NK+TF+CLUB+PUFFER+VEST+650.png",
     colors: ["#ffffff", "#000000", "#ef4444"],
   },
   {
@@ -168,7 +168,7 @@ const forSaleProducts = [
     name: "Nike Downshifter 12",
     description: "Lightweight running shoes for daily use.",
     price: 65,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/d3bbbc21-03a4-46c6-adc1-3066a1ea7e96/NIKE+CALM+SLIDE.png",
     colors: ["#22c55e", "#000000", "#ffffff"],
   },
   {
@@ -176,7 +176,7 @@ const forSaleProducts = [
     name: "Nike Air Zoom Pegasus Trail",
     description: "Trail-ready running shoes.",
     price: 145,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6b718157-668d-42e8-b93f-a1248f9d50c0/M+NK+TECH+FLC+WR+FZ+JKT+REFLEC.png",
     colors: ["#92400e", "#000000", "#ffffff"],
   },
   {
@@ -184,7 +184,7 @@ const forSaleProducts = [
     name: "Nike Air Max Alpha Trainer",
     description: "Stability and support for gym workouts.",
     price: 110,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/008523bf-0d28-4484-a5e3-c98f52f7ffc8/W+NSW+TF+SYNFL+NK+CLSC+PFR.png",
     colors: ["#000000", "#3b82f6", "#ffffff"],
   },
   {
@@ -192,7 +192,7 @@ const forSaleProducts = [
     name: "Nike SB Dunk Low",
     description: "Skate-inspired sneakers with premium feel.",
     price: 120,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u6w7hqga4172ieosf48b/AIR+VAPORMAX+PLUS.png",
     colors: ["#16a34a", "#000000", "#ffffff"],
   },
   {
@@ -200,88 +200,8 @@ const forSaleProducts = [
     name: "Nike Air Jordan 1 Low",
     description: "Low-cut version of the iconic Jordan 1.",
     price: 130,
-    image: "",
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6fcba56f-b8c9-4fd1-83db-e6cded8869e0/AIR+MAX+DN8.png",
     colors: ["#dc2626", "#ffffff", "#000000"],
-  },
-  {
-    id: 26,
-    name: "Nike Air Zoom GT Cut",
-    description: "Basketball shoes built for quick cuts.",
-    price: 170,
-    image: "",
-    colors: ["#7c3aed", "#000000", "#ffffff"],
-  },
-  {
-    id: 27,
-    name: "Nike Air Presto",
-    description: "Sock-like fit with lightweight comfort.",
-    price: 120,
-    image: "",
-    colors: ["#000000", "#ffffff", "#22c55e"],
-  },
-  {
-    id: 28,
-    name: "Nike Zoom Freak",
-    description: "Giannis-inspired basketball shoes.",
-    price: 135,
-    image: "",
-    colors: ["#1e40af", "#000000", "#ffffff"],
-  },
-  {
-    id: 29,
-    name: "Nike Air Max Flyknit",
-    description: "Breathable Flyknit upper with Air cushioning.",
-    price: 160,
-    image: "",
-    colors: ["#0ea5e9", "#000000", "#ffffff"],
-  },
-  {
-    id: 30,
-    name: "Nike Lunar Roam",
-    description: "Soft Lunar foam for all-day comfort.",
-    price: 125,
-    image: "",
-    colors: ["#9ca3af", "#000000", "#ffffff"],
-  },
-  {
-    id: 31,
-    name: "Nike Air Max Pulse",
-    description: "Street-inspired design with soft cushioning.",
-    price: 150,
-    image: "",
-    colors: ["#000000", "#ef4444", "#ffffff"],
-  },
-  {
-    id: 32,
-    name: "Nike Flex Experience",
-    description: "Minimalist running shoes for flexibility.",
-    price: 75,
-    image: "",
-    colors: ["#22c55e", "#ffffff", "#000000"],
-  },
-  {
-    id: 33,
-    name: "Nike Court Vision Low",
-    description: "Basketball-inspired casual sneakers.",
-    price: 85,
-    image: "",
-    colors: ["#ffffff", "#000000", "#2563eb"],
-  },
-  {
-    id: 34,
-    name: "Nike Air Max SYSTM",
-    description: "Modern Air Max look with lightweight feel.",
-    price: 110,
-    image: "",
-    colors: ["#000000", "#6b7280", "#ffffff"],
-  },
-  {
-    id: 35,
-    name: "Nike Air Max Terrascape",
-    description: "Sustainable materials with Air Max comfort.",
-    price: 180,
-    image: "",
-    colors: ["#14532d", "#000000", "#ffffff"],
   },
 ];
 
