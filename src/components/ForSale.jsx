@@ -1,112 +1,7 @@
 import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 
-
 const forSaleProducts = [
-  {
-    id: 1,
-    name: "Nike Air Max 270",
-    description: "Comfortable lifestyle sneakers with a bold Air unit design.",
-    price: 180,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1a6c00e4-30fa-41ab-85f0-caa39279dcaf/M+NK+DF+SWOOSH+FLEECE+PO+HOOD.png",
-    colors: ["#000000", "#ffffff", "#ff0000"],
-  },
-  {
-    id: 2,
-    name: "Nike LeBron James XXIII",
-    description: "Sport streetwear sneakers with iconic style and comfort.",
-    price: 160,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bea10067-4c89-4bae-8d75-ac5e0fb583e1/M+NK+DF+RISE+365+SS+C25.png",
-    colors: ["#1e40af", "#000000", "#facc15"],
-  },
-  {
-    id: 3,
-    name: "Nike Air Force 1 '07",
-    description: "Timeless basketball-inspired sneakers.",
-    price: 80,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/93c96113-e944-404e-ac1a-855091237fc8/W+NSW+PHNX+FLC+HR+PANT+WIDE+2.png",
-    colors: ["#ffffff", "#e5e7eb", "#000000"],
-  },
-  {
-    id: 4,
-    name: "Nike Dunk Low",
-    description: "Classic low-top sneakers for everyday wear.",
-    price: 110,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/464ab3ac-0dc0-4fd0-84bd-eae123a2db18/NIKE+CORTEZ.png",
-    colors: ["#000000", "#ffffff", "#22c55e"],
-  },
-  {
-    id: 5,
-    name: "Nike Air Jordan 1 Mid",
-    description: "Iconic Jordan style with modern comfort.",
-    price: 140,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/39e50a5f-9f4c-4bda-961d-66b23c71fefe/KILLSHOT+2.png",
-    colors: ["#dc2626", "#000000", "#ffffff"],
-  },
-  {
-    id: 6,
-    name: "Nike Air Max 90",
-    description: "Retro running style with visible Air cushioning.",
-    price: 130,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/7a5b9a2b-08b7-48ec-80f6-29d18c07a4bc/NIKE+AIR+MAX+90+PRM.png",
-    colors: ["#6b7280", "#ffffff", "#000000"],
-  },
-  {
-    id: 7,
-    name: "Nike React Infinity Run",
-    description: "Designed for comfort and injury prevention.",
-    price: 160,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6fcba56f-b8c9-4fd1-83db-e6cded8869e0/AIR+MAX+DN8.png",
-    colors: ["#2563eb", "#000000", "#ffffff"],
-  },
-  {
-    id: 8,
-    name: "Nike ZoomX Vaporfly",
-    description: "Elite racing shoes for maximum speed.",
-    price: 250,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/249089f5-f40c-4317-9f40-17a8d9148f61/JORDAN+TF+FLY+WARM+HOOD.png",
-    colors: ["#f97316", "#000000", "#ffffff"],
-  },
-  {
-    id: 9,
-    name: "Nike Pegasus 40",
-    description: "Daily running shoes with responsive cushioning.",
-    price: 130,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/ed5e2c7b-441b-4380-b3c8-39bfee5007e9/W+NSW+CLUB+FLC+MR+OS+PANT.png",
-    colors: ["#0ea5e9", "#ffffff", "#000000"],
-  },
-  {
-    id: 10,
-    name: "Nike Blazer Mid '77",
-    description: "Vintage basketball style reimagined.",
-    price: 100,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/292469d5-db4f-4c2c-af1a-0e764b02a030/WMNS+NIKE+SHOX+TL.png",
-    colors: ["#ffffff", "#000000", "#ef4444"],
-  },
-  {
-    id: 11,
-    name: "Nike Air Max Plus",
-    description: "Aggressive design with Tuned Air technology.",
-    price: 170,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/b37cda75-7519-43cf-8143-9c6dae4dc730/M+NK+DF+TEE+RLGD+RESET.png",
-    colors: ["#7c3aed", "#000000", "#ffffff"],
-  },
-  {
-    id: 12,
-    name: "Nike Free Run 5.0",
-    description: "Natural feel for flexible movement.",
-    price: 100,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/29812ed7-3786-4852-827f-cefa0888d265/COURT+BOROUGH+LOW+RECRAFT+BP.png",
-    colors: ["#22c55e", "#000000", "#ffffff"],
-  },
-  {
-    id: 13,
-    name: "Nike Air Zoom Structure",
-    description: "Stability running shoes with responsive Zoom Air.",
-    price: 140,
-    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/5ba6bf96-98b2-446d-b57f-c61c2c748974/W+NSW+CLUB+FLC+STD+PO+HDY.png",
-    colors: ["#2563eb", "#ffffff", "#000000"],
-  },
   {
     id: 14,
     name: "Nike Metcon 9",
@@ -203,8 +98,112 @@ const forSaleProducts = [
     image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6fcba56f-b8c9-4fd1-83db-e6cded8869e0/AIR+MAX+DN8.png",
     colors: ["#dc2626", "#ffffff", "#000000"],
   },
+{
+    id: 1,
+    name: "Nike Air Max 270",
+    description: "Comfortable lifestyle sneakers with a bold Air unit design.",
+    price: 180,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/1a6c00e4-30fa-41ab-85f0-caa39279dcaf/M+NK+DF+SWOOSH+FLEECE+PO+HOOD.png",
+    colors: ["#000000", "#ffffff", "#ff0000"],
+  },
+  {
+    id: 2,
+    name: "Nike LeBron James XXIII",
+    description: "Sport streetwear sneakers with iconic style and comfort.",
+    price: 160,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/bea10067-4c89-4bae-8d75-ac5e0fb583e1/M+NK+DF+RISE+365+SS+C25.png",
+    colors: ["#1e40af", "#000000", "#facc15"],
+  },
+  {
+    id: 3,
+    name: "Nike Air Force 1 '07",
+    description: "Timeless basketball-inspired sneakers.",
+    price: 80,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/93c96113-e944-404e-ac1a-855091237fc8/W+NSW+PHNX+FLC+HR+PANT+WIDE+2.png",
+    colors: ["#ffffff", "#e5e7eb", "#000000"],
+  },
+  {
+    id: 4,
+    name: "Nike Dunk Low",
+    description: "Classic low-top sneakers for everyday wear.",
+    price: 110,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/464ab3ac-0dc0-4fd0-84bd-eae123a2db18/NIKE+CORTEZ.png",
+    colors: ["#000000", "#ffffff", "#22c55e"],
+  },
+  {
+    id: 5,
+    name: "Nike Air Jordan 1 Mid",
+    description: "Iconic Jordan style with modern comfort.",
+    price: 140,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/39e50a5f-9f4c-4bda-961d-66b23c71fefe/KILLSHOT+2.png",
+    colors: ["#dc2626", "#000000", "#ffffff"],
+  },
+  {
+    id: 6,
+    name: "Nike Air Max 90",
+    description: "Retro running style with visible Air cushioning.",
+    price: 130,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/7a5b9a2b-08b7-48ec-80f6-29d18c07a4bc/NIKE+AIR+MAX+90+PRM.png",
+    colors: ["#6b7280", "#ffffff", "#000000"],
+  },
+  {
+    id: 7,
+    name: "Nike React Infinity Run",
+    description: "Designed for comfort and injury prevention.",
+    price: 160,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/6fcba56f-b8c9-4fd1-83db-e6cded8869e0/AIR+MAX+DN8.png",
+    colors: ["#2563eb", "#000000", "#ffffff"],
+  },
+  {
+    id: 8,
+    name: "Nike ZoomX Vaporfly",
+    description: "Elite racing shoes for maximum speed.",
+    price: 250,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/249089f5-f40c-4317-9f40-17a8d9148f61/JORDAN+TF+FLY+WARM+HOOD.png",
+    colors: ["#f97316", "#000000", "#ffffff"],
+  },
+  {
+    id: 9,
+    name: "Nike Pegasus 40",
+    description: "Daily running shoes with responsive cushioning.",
+    price: 130,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/ed5e2c7b-441b-4380-b3c8-39bfee5007e9/W+NSW+CLUB+FLC+MR+OS+PANT.png",
+    colors: ["#0ea5e9", "#ffffff", "#000000"],
+  },
+  {
+    id: 10,
+    name: "Nike Blazer Mid '77",
+    description: "Vintage basketball style reimagined.",
+    price: 100,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/292469d5-db4f-4c2c-af1a-0e764b02a030/WMNS+NIKE+SHOX+TL.png",
+    colors: ["#ffffff", "#000000", "#ef4444"],
+  },
+  {
+    id: 11,
+    name: "Nike Air Max Plus",
+    description: "Aggressive design with Tuned Air technology.",
+    price: 170,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/b37cda75-7519-43cf-8143-9c6dae4dc730/M+NK+DF+TEE+RLGD+RESET.png",
+    colors: ["#7c3aed", "#000000", "#ffffff"],
+  },
+  {
+    id: 12,
+    name: "Nike Free Run 5.0",
+    description: "Natural feel for flexible movement.",
+    price: 100,
+    image: "https://static.nike.com/a/images/t_web_pw_592_v2/f_auto/29812ed7-3786-4852-827f-cefa0888d265/COURT+BOROUGH+LOW+RECRAFT+BP.png",
+    colors: ["#22c55e", "#000000", "#ffffff"],
+    
+  },
+  
 ];
 
+const galleryImages = [
+  "https://static.nike.com/a/images/w_1280,c_limit,q_auto,f_auto/ef3o8p1kuvud7gj8fnhe/nike-air-moves-la-air-gallery.jpg",
+  "https://static.nike.com/a/images/w_1280,c_limit,q_auto,f_auto/pub7gzs2wd7lr6ktkkty/nike-air-moves-la-air-gallery.jpg",
+  "https://static.nike.com/a/images/w_1280,c_limit,q_auto,f_auto/sgiefvxjavqha4im7ufu/nike-air-moves-la-air-gallery.jpg",
+  "https://static.nike.com/a/images/w_1280,c_limit,q_auto,f_auto/ewhboss9s1jxz3gbcoky/nike-air-moves-la-air-gallery.jpg",
+];
 
 const ForSale = () => {
   const { addToCart } = useCart();
@@ -216,25 +215,27 @@ const ForSale = () => {
     if (!selectedProduct) return;
     addToCart({ ...selectedProduct, color: selectedColor });
     setSelectedProduct(null);
-    setShowRegister(true); 
+    setShowRegister(true);
   };
 
   return (
     <section className="relative text-white py-20 min-h-screen">
       <div className="absolute inset-0 bg-gradient-to-br from-[#ff4500] via-[#ff0000] to-[#330000] blur-3xl opacity-40"></div>
+
       <div className="relative max-w-[1400px] mx-auto px-6">
         <h2 className="text-4xl font-bold text-center mb-12 tracking-widest">
           FOR SALE 🔥
         </h2>
 
+ 
         <div className="flex flex-wrap justify-center gap-10">
           {forSaleProducts.map((item) => (
             <div
               key={item.id}
               className="w-[300px] bg-[#1a1a1a]/80 rounded-2xl p-6 flex flex-col items-center
-                         shadow-[0_0_25px_rgba(255,0,0,0.25)]
-                         hover:shadow-[0_0_45px_rgba(255,100,0,0.6)]
-                         transition-all duration-300"
+              shadow-[0_0_25px_rgba(255,0,0,0.25)]
+              hover:shadow-[0_0_45px_rgba(255,100,0,0.6)]
+              transition-all duration-300"
             >
               <img
                 src={item.image}
@@ -253,7 +254,7 @@ const ForSale = () => {
               <button
                 onClick={() => {
                   setSelectedProduct(item);
-                  setSelectedColor(item.colors ? item.colors[0] : null);
+                  setSelectedColor(item.colors[0]);
                 }}
                 className="w-full py-2 bg-orange-600 rounded-xl font-bold hover:bg-orange-700 transition"
               >
@@ -262,50 +263,70 @@ const ForSale = () => {
             </div>
           ))}
         </div>
+
+
+        <div className="my-24">
+          <h3 className="text-3xl font-bold text-center mb-10 tracking-widest">
+            NIKE GALLERY ✨
+          </h3>
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+            {galleryImages.map((img, i) => (
+              <div
+                key={i}
+                className="rounded-3xl overflow-hidden group shadow-lg"
+              >
+                <img
+                  src={img}
+                  alt="gallery"
+                  className="w-full h-[280px] object-cover group-hover:scale-110 transition duration-500"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
 
       {selectedProduct && (
         <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
-          <div className="bg-[#111] w-[90%] sm:w-[420px] rounded-2xl p-6 relative
-                          shadow-[0_0_40px_rgba(255,100,0,0.7)]">
+          <div className="bg-[#111] w-[90%] sm:w-[420px] rounded-2xl p-6 relative">
             <button
               onClick={() => setSelectedProduct(null)}
-              className="absolute top-3 right-4 text-2xl hover:text-orange-400"
+              className="absolute top-3 right-4 text-2xl"
             >
               ✖
             </button>
+
             <img
               src={selectedProduct.image}
               className="w-full h-[240px] object-contain mb-4"
             />
-            <h3 className="text-2xl font-bold mb-2">{selectedProduct.name}</h3>
-            <p className="text-gray-400 mb-4">{selectedProduct.description}</p>
-            <p className="text-xl font-bold text-orange-400 mb-4">
-              ${selectedProduct.price}
+
+            <h3 className="text-2xl font-bold mb-2">
+              {selectedProduct.name}
+            </h3>
+
+            <p className="text-gray-400 mb-4">
+              {selectedProduct.description}
             </p>
 
-            <div className="mb-6">
-              <p className="mb-3 font-semibold">Choose color:</p>
-              <div className="flex gap-4">
-                {selectedProduct.colors.map((color, i) => (
-                  <button
-                    key={i}
-                    onClick={() => setSelectedColor(color)}
-                    className={`w-10 h-10 rounded-full border-2 transition
-                      ${
-                        selectedColor === color
-                          ? "ring-4 ring-orange-500 scale-110"
-                          : "border-gray-400"
-                      }`}
-                    style={{ backgroundColor: color }}
-                  />
-                ))}
-              </div>
+            <div className="flex gap-4 mb-6">
+              {selectedProduct.colors.map((color, i) => (
+                <button
+                  key={i}
+                  onClick={() => setSelectedColor(color)}
+                  className={`w-10 h-10 rounded-full border-2 ${
+                    selectedColor === color
+                      ? "ring-4 ring-orange-500"
+                      : "border-gray-400"
+                  }`}
+                  style={{ backgroundColor: color }}
+                />
+              ))}
             </div>
 
             <button
               onClick={handleAddToCart}
-              className="w-full py-3 bg-orange-600 rounded-xl font-bold hover:bg-orange-700 transition"
+              className="w-full py-3 bg-orange-600 rounded-xl font-bold"
             >
               Add to Cart & Register
             </button>
@@ -318,27 +339,24 @@ const ForSale = () => {
           <div className="bg-[#111] w-[90%] sm:w-[400px] rounded-2xl p-6 relative">
             <button
               onClick={() => setShowRegister(false)}
-              className="absolute top-3 right-4 text-2xl hover:text-orange-400"
+              className="absolute top-3 right-4 text-2xl"
             >
               ✖
             </button>
             <h2 className="text-2xl font-bold mb-4 text-orange-500 text-center">
               Registration
             </h2>
-            <p className="text-gray-300 mb-4 text-center">
-              Please register to complete your purchase!
-            </p>
             <input
               type="text"
               placeholder="Email"
-              className="w-full mb-3 p-2 rounded bg-[#222] text-white"
+              className="w-full mb-3 p-2 rounded bg-[#222]"
             />
             <input
               type="password"
               placeholder="Password"
-              className="w-full mb-3 p-2 rounded bg-[#222] text-white"
+              className="w-full mb-3 p-2 rounded bg-[#222]"
             />
-            <button className="w-full py-2 bg-orange-600 rounded-xl font-bold hover:bg-orange-700 transition">
+            <button className="w-full py-2 bg-orange-600 rounded-xl font-bold">
               Register
             </button>
           </div>

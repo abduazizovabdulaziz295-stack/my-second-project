@@ -25,18 +25,21 @@ const Hero = () => {
         "slides.0.desc",
         "Experience the legendary comfort and timeless style."
       ),
+      badge: "LIMITED",
     },
     {
       image:
         "https://static.nike.com/a/images/w_2880,h_1410,c_fill,f_auto/e9bdaa66-3804-4142-8431-a56522ad4300/image.jpg",
       title: t("slides.1.title", "JUST DO IT"),
       desc: t("slides.1.desc", "Push your limits every single day."),
+      badge: "NEW",
     },
     {
       image:
         "https://static.nike.com/a/images/w_1920,c_limit/f244b1ae-1fac-407d-a7be-46a2ea85c159/mercurial.jpg",
       title: t("slides.2.title", "RUN WITH CONFIDENCE"),
       desc: t("slides.2.desc", "Speed. Comfort. Control."),
+      badge: "HOT",
     },
   ];
 
@@ -52,8 +55,8 @@ const Hero = () => {
   ];
 
   return (
-    <section className="w-full overflow-hidden">
-    
+    <section className="w-full overflow-hidden relative">
+      {/* SLIDER */}
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 4000 }}
@@ -65,25 +68,45 @@ const Hero = () => {
         {slides.map((s, i) => (
           <SwiperSlide key={i}>
             <div
-              className="h-full bg-cover bg-center flex items-center justify-center text-center"
+              className="relative h-full bg-cover bg-center flex items-center justify-center text-center"
               style={{ backgroundImage: `url(${s.image})` }}
             >
+              {/* BADGE */}
+              <span className="absolute top-8 left-8 bg-red-600 text-white px-5 py-1 rounded-full text-sm font-bold tracking-widest">
+                {s.badge}
+              </span>
+
               <div className="bg-black/60 p-10 rounded-2xl text-white max-w-xl">
                 <h1 className="text-5xl font-extrabold mb-4">{s.title}</h1>
                 <p className="mb-6">{s.desc}</p>
-                <Link
-                  to="/products"
-                  className="px-6 py-3 bg-red-600 rounded-full font-bold hover:bg-red-700"
-                >
-                  {t("shopNow", "Shop Now")}
-                </Link>
+
+                {/* CTA BUTTONS */}
+                <div className="flex gap-4 justify-center">
+                  <Link
+                    to="/products"
+                    className="px-6 py-3 bg-red-600 rounded-full font-bold hover:bg-red-700"
+                  >
+                    {t("shopNow", "Shop Now")}
+                  </Link>
+                  <Link
+                    to="/forsale"
+                    className="px-6 py-3 border border-white rounded-full font-bold hover:bg-white hover:text-black transition"
+                  >
+                    {t("explore", "Explore")}
+                  </Link>
+                </div>
               </div>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
+      {/* SCROLL INDICATOR */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-xs tracking-[0.3em] animate-bounce">
+        ↓ SCROLL
+      </div>
 
+      {/* SPOTLIGHT */}
       <div className="bg-white py-24 px-6">
         <h2 className="text-6xl font-extrabold text-center mb-6">
           {t("spotlight.title", "SPOTLIGHT")}
@@ -108,6 +131,7 @@ const Hero = () => {
                 className="h-20 object-contain mb-4 group-hover:scale-110 transition"
               />
               <p className="font-semibold">{item.name}</p>
+              <span className="mt-2 w-0 h-[2px] bg-black group-hover:w-full transition-all"></span>
             </div>
           ))}
         </div>
