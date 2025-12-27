@@ -56,7 +56,7 @@ const Hero = () => {
 
   return (
     <section className="w-full overflow-hidden relative">
-      {/* SLIDER */}
+
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
         autoplay={{ delay: 4000 }}
@@ -101,12 +101,12 @@ const Hero = () => {
         ))}
       </Swiper>
 
-      {/* SCROLL INDICATOR */}
+
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-xs tracking-[0.3em] animate-bounce">
         ↓ SCROLL
       </div>
 
-      {/* SPOTLIGHT */}
+   
       <div className="bg-white py-24 px-6">
         <h2 className="text-6xl font-extrabold text-center mb-6">
           {t("spotlight.title", "SPOTLIGHT")}

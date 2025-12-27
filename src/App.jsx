@@ -13,11 +13,10 @@ import ForSale from "./components/ForSale";
 function App() {
   const [search, setSearch] = useState("");
   const [darkMode, setDarkMode] = useState(false);
-
   const [cartItems, setCartItems] = useState([]);
   const [cartOpen, setCartOpen] = useState(false);
   const [registerOpen, setRegisterOpen] = useState(false);
-
+  const [paymentModal, setPaymentModal] = useState(null);
 
   useEffect(() => {
     const isDark = localStorage.getItem("darkMode") === "true";
@@ -31,7 +30,6 @@ function App() {
     localStorage.setItem("darkMode", !darkMode);
   };
 
-
   useEffect(() => {
     const savedCart = localStorage.getItem("cart");
     if (savedCart) {
@@ -42,7 +40,6 @@ function App() {
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(cartItems));
   }, [cartItems]);
-
 
   const addToCart = (item) => {
     setCartItems((prev) => [...prev, item]);
@@ -62,7 +59,6 @@ function App() {
   return (
     <Router>
       <div className="bg-white dark:bg-gray-900 min-h-screen text-gray-900 dark:text-gray-100 transition-colors duration-500">
-    
         <button
           onClick={toggleDarkMode}
           className="fixed top-4 right-4 z-50 px-4 py-2 bg-gray-200 dark:bg-gray-700 rounded-full shadow-lg"
@@ -102,7 +98,6 @@ function App() {
 
         <Footer />
 
-      
         {cartOpen && (
           <div className="fixed inset-0 bg-black/70 flex items-center justify-center z-50">
             <div className="bg-[#111] w-[95%] sm:w-[520px] rounded-2xl p-6 relative">
@@ -112,15 +107,11 @@ function App() {
               >
                 ✖
               </button>
-
               <h2 className="text-2xl font-bold mb-4 text-red-500">
                 🛒 Shopping Cart
               </h2>
-
               {cartItems.length === 0 ? (
-                <p className="text-center text-gray-400">
-                  Savatcha bo‘sh
-                </p>
+                <p className="text-center text-gray-400">Savatcha bo‘sh</p>
               ) : (
                 <>
                   <div className="flex flex-col gap-4 max-h-[300px] overflow-y-auto">
@@ -159,13 +150,10 @@ function App() {
                       </div>
                     ))}
                   </div>
-
-            
                   <div className="flex justify-between items-center mt-4 text-lg font-bold">
                     <span>Total:</span>
                     <span className="text-red-500">${totalPrice}</span>
                   </div>
-
                   <button
                     onClick={() => {
                       setCartOpen(false);
@@ -181,7 +169,6 @@ function App() {
           </div>
         )}
 
-  
         {registerOpen && (
           <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
             <div className="bg-[#111] w-[95%] sm:w-[420px] rounded-2xl p-6 relative">
@@ -191,31 +178,32 @@ function App() {
               >
                 ✖
               </button>
-
               <h2 className="text-3xl font-bold text-center text-red-500 mb-6">
                 Checkout
               </h2>
-
               <input
                 type="text"
                 placeholder="Ismingiz"
-                className="w-full mb-3 p-3 rounded-xl bg-black border border-gray-700"
+                className="w-full mb-3 p-3 rounded-xl bg-black border border-gray-700 text-white"
               />
               <input
                 type="email"
                 placeholder="Email"
-                className="w-full mb-3 p-3 rounded-xl bg-black border border-gray-700"
+                className="w-full mb-3 p-3 rounded-xl bg-black border border-gray-700 text-white"
               />
-
               <div className="flex flex-col gap-3 mt-4">
-                <button className="w-full py-3 bg-indigo-600 rounded-xl font-bold hover:bg-indigo-700">
+                <button
+                  onClick={() => setPaymentModal("payme")}
+                  className="w-full py-3 bg-indigo-600 rounded-xl font-bold hover:bg-indigo-700"
+                >
                   💳 Payme orqali to‘lash
                 </button>
-
-                <button className="w-full py-3 bg-green-600 rounded-xl font-bold hover:bg-green-700">
+                <button
+                  onClick={() => setPaymentModal("click")}
+                  className="w-full py-3 bg-green-600 rounded-xl font-bold hover:bg-green-700"
+                >
                   📲 Click orqali to‘lash
                 </button>
-
                 <button
                   onClick={() => {
                     localStorage.removeItem("cart");
@@ -228,6 +216,31 @@ function App() {
                   🛍 Buyurtmani tasdiqlash
                 </button>
               </div>
+            </div>
+          </div>
+        )}
+
+        {paymentModal && (
+          <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+            <div className="bg-[#111] w-[90%] sm:w-[360px] rounded-2xl p-6 relative flex flex-col items-center">
+              <button
+                onClick={() => setPaymentModal(null)}
+                className="absolute top-3 right-4 text-2xl hover:text-red-500"
+              >
+                ✖
+              </button>
+              <h2 className="text-2xl font-bold text-red-500 mb-4">
+                {paymentModal === "payme" ? "Payme QR" : "Click QR"}
+              </h2>
+              <img
+                src={
+                  paymentModal === "payme"
+                    ? "https://www.imgonline.com.ua/examples/qr-code-url.png"
+                    : "https://www.imgonline.com.ua/examples/qr-code-blue.png"
+                }
+                alt="QR Code"
+                className="w-64 h-64 object-contain"
+              />
             </div>
           </div>
         )}
