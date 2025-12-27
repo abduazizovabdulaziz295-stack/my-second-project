@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { useTranslation } from "react-i18next";
+import USPBar from "./USPBar";
+
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -71,7 +73,7 @@ const Hero = () => {
               className="relative h-full bg-cover bg-center flex items-center justify-center text-center"
               style={{ backgroundImage: `url(${s.image})` }}
             >
-              {/* BADGE */}
+         
               <span className="absolute top-8 left-8 bg-red-600 text-white px-5 py-1 rounded-full text-sm font-bold tracking-widest">
                 {s.badge}
               </span>
@@ -80,7 +82,7 @@ const Hero = () => {
                 <h1 className="text-5xl font-extrabold mb-4">{s.title}</h1>
                 <p className="mb-6">{s.desc}</p>
 
-                {/* CTA BUTTONS */}
+            
                 <div className="flex gap-4 justify-center">
                   <Link
                     to="/products"
@@ -100,6 +102,8 @@ const Hero = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <USPBar />
+
 
 
       <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-xs tracking-[0.3em] animate-bounce">
